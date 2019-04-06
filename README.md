@@ -4,7 +4,7 @@
 
 ### Create user ops in alpha client server
 1. Login to alpha client server and create new user  <br />
-  > useradd ops; echo password | passwd your-service-user --stdin <br />
+  > useradd ops; echo password | passwd ops --stdin <br />
 2. grant read permission for log file <br />
   > chmod 604 /var/log/secure <br />
 3. Rerun above command to another alpha client server <br />
