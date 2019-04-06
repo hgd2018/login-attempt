@@ -4,6 +4,8 @@ chmod +x *.sh
 #Install nginx package
 cp nginx.repo /etc/yum.repos.d/nginx.repo
 yum -y install nginx
+systemctl start nginx
+systemctl enable nginx
 
 #Create nodes directory
 mkdir /usr/share/nginx/html/nodes
