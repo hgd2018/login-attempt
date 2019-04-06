@@ -1,12 +1,12 @@
 source properties.env
 
-a1f=`ssh baru@$ip_alpha1 cat /var/log/secure|grep "Failed password"|wc -l`
-a1a=`ssh baru@$ip_alpha1 cat /var/log/secure|grep "Accepted password"|wc -l`
+a1f=`ssh ops@$ip_alpha1 cat /var/log/secure|grep "Failed password"|wc -l`
+a1a=`ssh ops@$ip_alpha1 cat /var/log/secure|grep "Accepted password"|wc -l`
 no=`expr $a1f + $a1a`
 echo $no > /usr/share/nginx/html/nodes/$ip_alpha1.txt
 
-a2f=`ssh baru@$ip_alpha2 cat /var/log/secure|grep "Failed password"|wc -l`
-a2a=`ssh baru@$ip_alpha2 cat /var/log/secure|grep "Accepted password"|wc -l`
+a2f=`ssh ops@$ip_alpha2 cat /var/log/secure|grep "Failed password"|wc -l`
+a2a=`ssh ops@$ip_alpha2 cat /var/log/secure|grep "Accepted password"|wc -l`
 no=`expr $a2f + $a2a`
 echo $no > /usr/share/nginx/html/nodes/$ip_alpha2.txt
 
