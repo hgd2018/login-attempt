@@ -1,6 +1,9 @@
 #Grant execute permission
 chmod +x *.sh
 
+#Remove firewall
+yum -y remove firewalld
+
 #Install nginx package
 cp nginx.repo /etc/yum.repos.d/nginx.repo
 yum -y install nginx
