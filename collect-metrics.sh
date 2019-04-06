@@ -33,6 +33,7 @@ echo "<tr>" >> /usr/share/nginx/html/metrics.html
 echo "<th>Metrics for ssh log-ins attempts</th>" >> /usr/share/nginx/html/metrics.html
 echo "</tr>" >> /usr/share/nginx/html/metrics.html
 
+cd /usr/share/nginx/html
 files=`ls nodes`
 for no in ${files[*]}
 do
