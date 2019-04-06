@@ -22,7 +22,10 @@
    > yum -y install git <br />
 3. Pull the repo <br />
    > git clone https://github.com/hgd2018/login-attempt.git  <br />
-4. Execute the script start-1.sh <br />
+4. Change the properties.env file with your destination alpha client ip address
+   > ip_alpha1=ip_address <br />
+     ip_alpha2=ip_address
+5. Execute the script start-1.sh <br />
    > cd login-attempt <br />
    > sh ./start-1.sh <br />
 
