@@ -10,28 +10,7 @@ a2a=`ssh ops@$ip_alpha2 cat /var/log/secure|grep "Accepted password"|wc -l`
 no=`expr $a2f + $a2a`
 echo $no > /usr/share/nginx/html/nodes/$ip_alpha2.txt
 
-echo "<html>" > /usr/share/nginx/html/metrics.html
-echo "<head>" >> /usr/share/nginx/html/metrics.html
-echo "<style>" >> /usr/share/nginx/html/metrics.html
-echo "table {" >> /usr/share/nginx/html/metrics.html
-echo "  border-collapse: collapse;" >> /usr/share/nginx/html/metrics.html
-echo "  width: 20%;" >> /usr/share/nginx/html/metrics.html
-echo "}" >> /usr/share/nginx/html/metrics.html
-
-echo "th, td {" >> /usr/share/nginx/html/metrics.html
-echo "  text-align: left;" >> /usr/share/nginx/html/metrics.html
-echo "  padding: 8px;" >> /usr/share/nginx/html/metrics.html
-echo "}" >> /usr/share/nginx/html/metrics.html
-
-echo "tr:nth-child(even) {background-color: #f2f2f2;}" >> /usr/share/nginx/html/metrics.html
-echo "</style>" >> /usr/share/nginx/html/metrics.html
-echo "</head>" >> /usr/share/nginx/html/metrics.html
-echo "<title>Metrics SSH attempt login</title>" >> /usr/share/nginx/html/metrics.html
-echo "<body>" >> /usr/share/nginx/html/metrics.html
-echo "<table>" >> /usr/share/nginx/html/metrics.html
-echo "<tr>" >> /usr/share/nginx/html/metrics.html
-echo "<th>Metrics for ssh log-ins attempts</th>" >> /usr/share/nginx/html/metrics.html
-echo "</tr>" >> /usr/share/nginx/html/metrics.html
+cp -rf metrics.html /usr/share/nginx/html 
 
 cd /usr/share/nginx/html
 files=`ls nodes`
