@@ -15,7 +15,7 @@ echo "<head>" >> /usr/share/nginx/html/metrics.html
 echo "<script type = "text/JavaScript">" >> /usr/share/nginx/html/metrics.html
 echo "         <!--" >> /usr/share/nginx/html/metrics.html
 echo "            function AutoRefresh( t ) {" >> /usr/share/nginx/html/metrics.html
-echo "               setTimeout("location.reload(true);", t);" >> /usr/share/nginx/html/metrics.html
+echo "               setTimeout(\"location.reload(true);\", t);" >> /usr/share/nginx/html/metrics.html
 echo "            }" >> /usr/share/nginx/html/metrics.html
 echo "         //-->" >> /usr/share/nginx/html/metrics.html
 echo "</script>" >> /usr/share/nginx/html/metrics.html
@@ -34,7 +34,7 @@ echo "tr:nth-child(even) {background-color: #f2f2f2;}" >> /usr/share/nginx/html/
 echo "</style>" >> /usr/share/nginx/html/metrics.html
 echo "</head>" >> /usr/share/nginx/html/metrics.html
 echo "<title>Metrics SSH attempt login</title>" >> /usr/share/nginx/html/metrics.html
-echo "<body onload = "JavaScript:AutoRefresh(5000);>" >> /usr/share/nginx/html/metrics.html
+echo "<body onload = \"JavaScript:AutoRefresh(5000);\">" >> /usr/share/nginx/html/metrics.html
 echo "<table>" >> /usr/share/nginx/html/metrics.html
 echo "<tr>" >> /usr/share/nginx/html/metrics.html
 echo "<th>Metrics for ssh log-ins attempts</th>" >> /usr/share/nginx/html/metrics.html
