@@ -1,4 +1,4 @@
-source properties.env
+source ~/login-attempt/properties.env
 
 a1f=`ssh ops@$ip_alpha1 cat /var/log/secure|grep "Failed password"|wc -l`
 a1a=`ssh ops@$ip_alpha1 cat /var/log/secure|grep "Accepted password"|wc -l`
