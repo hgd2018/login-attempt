@@ -23,10 +23,10 @@
 3. Pull the repo <br />
    > git clone https://github.com/hgd2018/login-attempt.git  <br />
 4. Change the properties.env file with your destination alpha client ip address
+   > cd login-attempt <br />
    > ip_alpha1=ip_address <br />
      ip_alpha2=ip_address
 5. Execute the script start-1.sh <br />
-   > cd login-attempt <br />
    > sh ./start-1.sh <br />
 
 ##### Notes: <br />
