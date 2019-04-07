@@ -30,4 +30,5 @@
    > sh ./start-1.sh <br />
 
 ##### Notes: <br />
-Crontab runs every 2 minutes to collect login-attempt metrics
+- Crontab runs every 2 minutes to collect login-attempt metrics
+- Tested using centos 7 Operating System
